@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+header{
+    background:#2e7d32;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+.banner{
+    background:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200');
+    background-size:cover;
+    background-position:center;
+    height:350px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+    font-size:2rem;
+    text-shadow:2px 2px 5px black;
+}
+
+.sobre{
+    padding:40px;
+    text-align:center;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:30px;
+}
+
+.card{
+    background:white;
+    width:250px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.estatisticas{
+    text-align:center;
+    padding:40px;
+    background:#c8e6c9;
+}
+
+.contador{
+    margin:20px;
+    display:inline-block;
+}
+
+.contador h3{
+    font-size:40px;
+    color:#1b5e20;
+}
+
+.galeria{
+    text-align:center;
+    padding:40px;
+}
+
+.galeria img{
+    width:300px;
+    margin:10px;
+    border-radius:10px;
+}
+
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
