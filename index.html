@@ -1,84 +1,581 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte, Futuro Sustentável</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agro Forte, Futuro Sustentável</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-
-<header>
-    <h1>🌱 Agro Forte, Futuro Sustentável</h1>
-    <p>Equilíbrio entre Produção e Meio Ambiente</p>
-</header>
-
-<section class="banner">
-    <h2> Produzir mais, preservando o amanhã </h2>
-</section>
-
-<section class="sobre">
-    <h2>Sobre o Projeto</h2>
-    <p>
-        A agricultura sustentável busca aumentar a produtividade
-        respeitando os recursos naturais, garantindo alimento,
-        renda e qualidade de vida para as futuras gerações.
-    </p>
-</section>
-
-<section class="cards">
-    <div class="card">
-        <h3>🌾 Produção Responsável</h3>
-        <p>Uso consciente dos recursos naturais.</p>
+ 
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon">🌿</span>
+        <span>AgroFuturo</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#ambiente">Meio Ambiente</a></li>
+        <li><a href="#tecnologias">Tecnologias</a></li>
+        <li><a href="#impactos">Impactos</a></li>
+        <li><a href="#grafico">Dados</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+      </ul>
     </div>
-
-    <div class="card">
-        <h3>🚜 Tecnologia</h3>
-        <p>Drones, sensores e agricultura de precisão.</p>
+  </nav>
+ 
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-particle" style="--x:10%;--y:20%;--s:80px;--d:6s"></div>
+      <div class="hero-particle" style="--x:80%;--y:15%;--s:120px;--d:8s"></div>
+      <div class="hero-particle" style="--x:50%;--y:70%;--s:60px;--d:5s"></div>
+      <div class="hero-particle" style="--x:25%;--y:80%;--s:100px;--d:9s"></div>
+      <div class="hero-particle" style="--x:90%;--y:60%;--s:70px;--d:7s"></div>
+      <div class="hero-lines"></div>
     </div>
-
-    <div class="card">
-        <h3>🌳 Meio Ambiente</h3>
-        <p>Proteção das florestas e biodiversidade.</p>
+    <div class="hero-content reveal-hero">
+      <span class="hero-badge">🌱 Sustentabilidade &amp; Inovação</span>
+      <h1 class="hero-title">
+        Agro Forte,<br>
+        <em>Futuro Sustentável</em>
+      </h1>
+      <p class="hero-subtitle">
+        Onde a força da produção encontra a sabedoria da preservação.
+        O agronegócio moderno como agente de transformação ambiental.
+      </p>
+      <div class="hero-actions">
+        <a href="#ambiente" class="btn-primary">Explorar o Projeto</a>
+        <a href="#quiz" class="btn-outline">Fazer o Quiz</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><strong>+45%</strong><span>Eficiência</span></div>
+        <div class="hstat-divider"></div>
+        <div class="hstat"><strong>−30%</strong><span>Desperdício</span></div>
+        <div class="hstat-divider"></div>
+        <div class="hstat"><strong>80%</strong><span>Sustentável</span></div>
+      </div>
     </div>
-
-    <div class="card">
-        <h3>♻ Sustentabilidade</h3>
-        <p>Garantir recursos para as futuras gerações.</p>
+    <div class="hero-visual">
+      <div class="hero-illustration">
+        <svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+          <!-- Ground -->
+          <ellipse cx="240" cy="400" rx="200" ry="40" fill="#2E7D32" opacity="0.3"/>
+          <!-- Tree trunk -->
+          <rect x="224" y="280" width="32" height="120" rx="8" fill="#8D6E63"/>
+          <!-- Tree canopy layers -->
+          <polygon points="240,80 160,220 320,220" fill="#1B5E20"/>
+          <polygon points="240,120 150,240 330,240" fill="#2E7D32"/>
+          <polygon points="240,160 140,260 340,260" fill="#388E3C"/>
+          <polygon points="240,200 155,295 325,295" fill="#43A047"/>
+          <!-- Sun -->
+          <circle cx="380" cy="90" r="44" fill="#FFF9C4" opacity="0.9"/>
+          <circle cx="380" cy="90" r="34" fill="#FFF176"/>
+          <!-- Sun rays -->
+          <g stroke="#FFF176" stroke-width="3" opacity="0.6">
+            <line x1="380" y1="34" x2="380" y2="20"/>
+            <line x1="380" y1="146" x2="380" y2="160"/>
+            <line x1="324" y1="90" x2="310" y2="90"/>
+            <line x1="436" y1="90" x2="450" y2="90"/>
+            <line x1="340" y1="50" x2="330" y2="40"/>
+            <line x1="420" y1="130" x2="430" y2="140"/>
+            <line x1="340" y1="130" x2="330" y2="140"/>
+            <line x1="420" y1="50" x2="430" y2="40"/>
+          </g>
+          <!-- Drone -->
+          <g transform="translate(100,130)">
+            <rect x="-18" y="-6" width="36" height="12" rx="6" fill="#66BB6A"/>
+            <circle cx="-22" cy="-10" r="10" fill="none" stroke="#A5D6A7" stroke-width="3"/>
+            <circle cx="22" cy="-10" r="10" fill="none" stroke="#A5D6A7" stroke-width="3"/>
+            <circle cx="-22" cy="10" r="10" fill="none" stroke="#A5D6A7" stroke-width="3"/>
+            <circle cx="22" cy="10" r="10" fill="none" stroke="#A5D6A7" stroke-width="3"/>
+            <rect x="-3" y="6" width="6" height="16" rx="3" fill="#81C784"/>
+            <circle cx="0" cy="25" r="5" fill="#C8E6C9" opacity="0.7"/>
+          </g>
+          <!-- Water drop / irrigation -->
+          <g transform="translate(340,310)">
+            <path d="M0,-30 Q20,0 0,30 Q-20,0 0,-30" fill="#64B5F6" opacity="0.8"/>
+          </g>
+          <!-- Small plants -->
+          <g transform="translate(90,380)">
+            <rect x="-3" y="-30" width="6" height="30" fill="#8D6E63"/>
+            <ellipse cx="0" cy="-30" rx="15" ry="20" fill="#66BB6A"/>
+          </g>
+          <g transform="translate(390,385)">
+            <rect x="-3" y="-20" width="6" height="20" fill="#8D6E63"/>
+            <ellipse cx="0" cy="-20" rx="12" ry="15" fill="#81C784"/>
+          </g>
+          <!-- Solar panel -->
+          <g transform="translate(50,300)">
+            <rect x="-25" y="-15" width="50" height="30" rx="3" fill="#1565C0" opacity="0.8"/>
+            <line x1="-25" y1="-15" x2="-25" y2="15" stroke="#90CAF9" stroke-width="1"/>
+            <line x1="-8" y1="-15" x2="-8" y2="15" stroke="#90CAF9" stroke-width="1"/>
+            <line x1="8" y1="-15" x2="8" y2="15" stroke="#90CAF9" stroke-width="1"/>
+            <line x1="25" y1="-15" x2="25" y2="15" stroke="#90CAF9" stroke-width="1"/>
+            <line x1="-25" y1="0" x2="25" y2="0" stroke="#90CAF9" stroke-width="1"/>
+            <rect x="-3" y="15" width="6" height="20" fill="#78909C"/>
+          </g>
+        </svg>
+      </div>
     </div>
-</section>
-
-<section class="estatisticas">
-    <h2>Nossos Resultados</h2>
-
-    <div class="contador">
-        <h3 id="num1">0</h3>
-        <p>Árvores Preservadas</p>
+    <a href="#ambiente" class="hero-scroll-hint">
+      <span>Role para baixo</span>
+      <div class="scroll-arrow"></div>
+    </a>
+  </section>
+ 
+  <!-- ===== AMBIENTE ===== -->
+  <section id="ambiente" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">🌍 Consciência Ambiental</span>
+        <h2>O Agro e o Meio Ambiente</h2>
+        <p>O agronegócio moderno reconhece que produzir mais exige preservar melhor. Cada prática sustentável é um investimento no futuro da produção e do planeta.</p>
+      </div>
+      <div class="ambiente-grid">
+        <div class="ambiente-card reveal" data-delay="0">
+          <div class="acard-icon">🌳</div>
+          <h3>Preservação Ambiental</h3>
+          <p>Reservas legais e APPs garantem a manutenção de ecossistemas nativos, protegendo a biodiversidade e os serviços ambientais essenciais à produção agrícola.</p>
+          <div class="acard-bar"><div class="acard-fill" data-width="78"></div></div>
+          <span class="acard-pct">78% das fazendas certificadas</span>
+        </div>
+        <div class="ambiente-card reveal" data-delay="100">
+          <div class="acard-icon">🌾</div>
+          <h3>Agricultura Sustentável</h3>
+          <p>Rotação de culturas, plantio direto e integração lavoura-pecuária-floresta reduzem a erosão do solo e aumentam a produtividade de forma contínua.</p>
+          <div class="acard-bar"><div class="acard-fill" data-width="85"></div></div>
+          <span class="acard-pct">85% de adesão crescente</span>
+        </div>
+        <div class="ambiente-card reveal" data-delay="200">
+          <div class="acard-icon">💧</div>
+          <h3>Uso Consciente da Água</h3>
+          <p>Sistemas de irrigação inteligente, captação de água da chuva e reúso eficiente reduzem em até 40% o consumo hídrico por tonelada produzida.</p>
+          <div class="acard-bar"><div class="acard-fill" data-width="70"></div></div>
+          <span class="acard-pct">70% de redução alcançável</span>
+        </div>
+        <div class="ambiente-card reveal" data-delay="300">
+          <div class="acard-icon">♻️</div>
+          <h3>Redução de Desperdícios</h3>
+          <p>Da colheita ao consumidor, tecnologias de rastreabilidade e logística inteligente eliminam perdas e transformam resíduos em biogás e adubo orgânico.</p>
+          <div class="acard-bar"><div class="acard-fill" data-width="62"></div></div>
+          <span class="acard-pct">62% menos perdas pós-colheita</span>
+        </div>
+      </div>
     </div>
-
-    <div class="contador">
-        <h3 id="num2">0</h3>
-        <p>Produtores Sustentáveis</p>
+  </section>
+ 
+  <!-- ===== TECNOLOGIAS ===== -->
+  <section id="tecnologias" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">⚙️ Inovação Verde</span>
+        <h2>Tecnologias Sustentáveis</h2>
+        <p>A revolução verde digital combina dados, sensores e energia limpa para transformar o campo em um laboratório de sustentabilidade e alta performance.</p>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-card reveal" data-delay="0">
+          <div class="tcard-top">
+            <span class="tcard-icon">🛰️</span>
+            <span class="tcard-badge">Precision</span>
+          </div>
+          <h3>Agricultura de Precisão</h3>
+          <p>GPS, drones e satélites mapeiam cada metro do campo para aplicar insumos exatamente onde e quando necessário, eliminando desperdícios.</p>
+          <div class="tcard-tags">
+            <span>GPS</span><span>Satélite</span><span>Big Data</span>
+          </div>
+        </div>
+        <div class="tech-card reveal" data-delay="100">
+          <div class="tcard-top">
+            <span class="tcard-icon">📡</span>
+            <span class="tcard-badge">IoT</span>
+          </div>
+          <h3>Sensores Inteligentes</h3>
+          <p>Redes de sensores monitoram solo, umidade, temperatura e pragas em tempo real, enviando alertas automáticos ao produtor via smartphone.</p>
+          <div class="tcard-tags">
+            <span>IoT</span><span>IA</span><span>Automação</span>
+          </div>
+        </div>
+        <div class="tech-card reveal" data-delay="200">
+          <div class="tcard-top">
+            <span class="tcard-icon">🚁</span>
+            <span class="tcard-badge">Aéreo</span>
+          </div>
+          <h3>Drones Agrícolas</h3>
+          <p>Pulverização ultra-precisa, monitoramento de lavouras e mapeamento topográfico com drones reduzem em 30% o uso de defensivos agrícolas.</p>
+          <div class="tcard-tags">
+            <span>Pulverização</span><span>Mapeamento</span>
+          </div>
+        </div>
+        <div class="tech-card reveal" data-delay="300">
+          <div class="tcard-top">
+            <span class="tcard-icon">☀️</span>
+            <span class="tcard-badge">Energia</span>
+          </div>
+          <h3>Energia Renovável</h3>
+          <p>Painéis solares, biodigestores e mini turbinas eólicas tornam as fazendas energeticamente autossuficientes e produtoras de créditos de carbono.</p>
+          <div class="tcard-tags">
+            <span>Solar</span><span>Biogás</span><span>Eólica</span>
+          </div>
+        </div>
+        <div class="tech-card reveal" data-delay="400">
+          <div class="tcard-top">
+            <span class="tcard-icon">💧</span>
+            <span class="tcard-badge">Hídrico</span>
+          </div>
+          <h3>Irrigação Eficiente</h3>
+          <p>Gotejamento inteligente, pivô central com IA e reúso de águas residuais garantem colheitas abundantes mesmo em períodos de seca.</p>
+          <div class="tcard-tags">
+            <span>Gotejo</span><span>Pivô</span><span>Reúso</span>
+          </div>
+        </div>
+        <div class="tech-card reveal" data-delay="500">
+          <div class="tcard-top">
+            <span class="tcard-icon">🧬</span>
+            <span class="tcard-badge">BioTech</span>
+          </div>
+          <h3>Biotecnologia Verde</h3>
+          <p>Variedades melhoradas geneticamente exigem menos água, resistem a pragas naturalmente e produzem mais por hectare com menor impacto ambiental.</p>
+          <div class="tcard-tags">
+            <span>Genômica</span><span>CRISPR</span><span>Biofertilizantes</span>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="contador">
-        <h3 id="num3">0</h3>
-        <p>Projetos Ambientais</p>
+  </section>
+ 
+  <!-- ===== IMPACTOS ===== -->
+  <section id="impactos" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">📊 Resultados Reais</span>
+        <h2>Impactos Positivos</h2>
+        <p>Números que comprovam: sustentabilidade e produtividade não se opõem — elas se potencializam.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card reveal" data-delay="0">
+          <div class="stat-icon">💧</div>
+          <div class="stat-number" data-target="30" data-suffix="%">0%</div>
+          <div class="stat-label">Menos desperdício de água</div>
+          <div class="stat-desc">Irrigação inteligente e reúso hídrico nas propriedades certificadas</div>
+        </div>
+        <div class="stat-card reveal" data-delay="150">
+          <div class="stat-icon">📈</div>
+          <div class="stat-number" data-target="45" data-suffix="%">0%</div>
+          <div class="stat-label">Mais eficiência produtiva</div>
+          <div class="stat-desc">Aumento médio de produção por hectare com práticas de precisão</div>
+        </div>
+        <div class="stat-card reveal" data-delay="300">
+          <div class="stat-icon">🌿</div>
+          <div class="stat-number" data-target="60" data-suffix="%">0%</div>
+          <div class="stat-label">Redução de impactos ambientais</div>
+          <div class="stat-desc">Queda nas emissões de CO₂ com manejo sustentável do solo</div>
+        </div>
+        <div class="stat-card reveal" data-delay="450">
+          <div class="stat-icon">🏆</div>
+          <div class="stat-number" data-target="80" data-suffix="%">0%</div>
+          <div class="stat-label">Adoção de práticas sustentáveis</div>
+          <div class="stat-desc">Produtores do agronegócio moderno já incorporaram ao menos uma prática verde</div>
+        </div>
+      </div>
     </div>
-</section>
-
-<section class="galeria">
-    <h2>Galeria Agro Sustentável</h2>
-    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=500" alt="">
-    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=500" alt="">
-    <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=500" alt="">
-</section>
-
-<footer>
-    <p>Projeto Agrinho 2026 - Agro Forte, Futuro Sustentável</p>
-</footer>
-
-<script src="script.js"></script>
-
+  </section>
+ 
+  <!-- ===== GRÁFICO ===== -->
+  <section id="grafico" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">📉 Dados &amp; Tendências</span>
+        <h2>Crescimento com Sustentabilidade</h2>
+        <p>A evolução simultânea da produção agrícola e das práticas sustentáveis entre 2020 e 2025.</p>
+      </div>
+      <div class="chart-wrapper reveal">
+        <canvas id="agroChart"></canvas>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== GALERIA ===== -->
+  <section id="galeria" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">🖼️ Campo em Imagens</span>
+        <h2>Galeria Interativa</h2>
+        <p>Veja o agronegócio sustentável em ação — da fazenda à mesa, da tecnologia à natureza preservada.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item reveal" data-delay="0" style="--bg:linear-gradient(135deg,#1B5E20,#388E3C)">
+          <div class="gallery-overlay">
+            <span class="gal-icon">🏡</span>
+            <h4>Fazenda Sustentável</h4>
+            <p>Propriedades que integram produção e preservação ambiental em harmonia</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-delay="100" style="--bg:linear-gradient(135deg,#2E7D32,#66BB6A)">
+          <div class="gallery-overlay">
+            <span class="gal-icon">🌽</span>
+            <h4>Plantação Moderna</h4>
+            <p>Culturas monitoradas digitalmente para máxima produtividade e mínimo impacto</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-delay="200" style="--bg:linear-gradient(135deg,#1565C0,#0288D1)">
+          <div class="gallery-overlay">
+            <span class="gal-icon">☀️</span>
+            <h4>Energia Solar Rural</h4>
+            <p>Painéis fotovoltaicos alimentando sistemas de irrigação e equipamentos do campo</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-delay="300" style="--bg:linear-gradient(135deg,#00695C,#26A69A)">
+          <div class="gallery-overlay">
+            <span class="gal-icon">💧</span>
+            <h4>Irrigação Inteligente</h4>
+            <p>Gotejamento de precisão que entrega água exatamente nas raízes das plantas</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-delay="400" style="--bg:linear-gradient(135deg,#4A148C,#7B1FA2)">
+          <div class="gallery-overlay">
+            <span class="gal-icon">🦋</span>
+            <h4>Preservação Ambiental</h4>
+            <p>Reservas de mata nativa que protegem nascentes, fauna e solo fértil</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-delay="500" style="--bg:linear-gradient(135deg,#E65100,#FF8F00)">
+          <div class="gallery-overlay">
+            <span class="gal-icon">🚁</span>
+            <h4>Drones em Operação</h4>
+            <p>Monitoramento aéreo e pulverização precisa reduzindo custos e impacto ambiental</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== QUIZ ===== -->
+  <section id="quiz" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">🧠 Teste seu Conhecimento</span>
+        <h2>Quiz Sustentável</h2>
+        <p>Descubra o quanto você sabe sobre sustentabilidade no agronegócio.</p>
+      </div>
+      <div class="quiz-wrapper reveal">
+        <div id="quiz-container">
+          <div class="quiz-progress-bar">
+            <div id="quiz-progress" style="width:0%"></div>
+          </div>
+          <div id="quiz-question-area">
+            <div class="quiz-meta">
+              <span id="quiz-counter">Pergunta 1 de 5</span>
+              <span id="quiz-score-live">Acertos: 0</span>
+            </div>
+            <h3 id="quiz-question"></h3>
+            <div id="quiz-options" class="quiz-options"></div>
+          </div>
+          <div id="quiz-result" class="quiz-result hidden">
+            <div class="result-icon" id="result-icon"></div>
+            <h3 id="result-title"></h3>
+            <p id="result-message"></p>
+            <div class="result-score">
+              <span id="result-score-num"></span>
+              <span>/ 5 acertos</span>
+            </div>
+            <button id="quiz-restart" class="btn-primary">Jogar Novamente</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== TIMELINE ===== -->
+  <section id="timeline" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">⏳ Evolução Histórica</span>
+        <h2>Linha do Tempo do Agro</h2>
+        <p>Da produção tradicional ao futuro sustentável — a jornada de transformação do agronegócio brasileiro.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal" data-side="left">
+          <div class="tl-content">
+            <div class="tl-icon">🌾</div>
+            <div class="tl-year">Século XX</div>
+            <h3>Produção Tradicional</h3>
+            <p>Agricultura familiar e extensiva como base da economia rural. Técnicas manuais e conhecimento empírico passado por gerações.</p>
+          </div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="timeline-item reveal" data-side="right">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-icon">🚜</div>
+            <div class="tl-year">1970–1990</div>
+            <h3>Modernização Agrícola</h3>
+            <p>Revolução Verde: mecanização, fertilizantes sintéticos e variedades melhoradas multiplicam a produção mas trazem desafios ambientais.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal" data-side="left">
+          <div class="tl-content">
+            <div class="tl-icon">💻</div>
+            <div class="tl-year">2000–2010</div>
+            <h3>Agricultura Digital</h3>
+            <p>GPS, sensoriamento remoto e sistemas de gestão informatizados chegam ao campo, permitindo decisões baseadas em dados precisos.</p>
+          </div>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="timeline-item reveal" data-side="right">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-icon">♻️</div>
+            <div class="tl-year">2010–2020</div>
+            <h3>Sustentabilidade Integrada</h3>
+            <p>Certificações ambientais, créditos de carbono e práticas de baixo impacto se tornam diferenciais competitivos no mercado global.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal" data-side="left">
+          <div class="tl-content">
+            <div class="tl-icon">🚀</div>
+            <div class="tl-year">2025+</div>
+            <h3>Futuro Sustentável</h3>
+            <p>IA, blockchain, biotecnologia e energia renovável convergem para um agronegócio que alimenta 10 bilhões de pessoas com zero desperdício.</p>
+          </div>
+          <div class="tl-dot"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== CURIOSIDADES ===== -->
+  <section id="curiosidades" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">💡 Você Sabia?</span>
+        <h2>Curiosidades Sustentáveis</h2>
+        <p>Fatos surpreendentes sobre agricultura, meio ambiente e tecnologias verdes. Clique nos cards para expandir.</p>
+      </div>
+      <div class="curiosity-grid">
+        <div class="curiosity-card reveal" data-delay="0">
+          <div class="cur-header">
+            <span class="cur-icon">🌱</span>
+            <h4>Plantio Direto</h4>
+            <span class="cur-arrow">▼</span>
+          </div>
+          <div class="cur-body">
+            <p>O Brasil é líder mundial em plantio direto, com mais de 35 milhões de hectares. Essa técnica mantém o solo coberto, reduz erosão em até 90% e sequestra carbono atmosférico.</p>
+          </div>
+        </div>
+        <div class="curiosity-card reveal" data-delay="100">
+          <div class="cur-header">
+            <span class="cur-icon">🐝</span>
+            <h4>Polinizadores Essenciais</h4>
+            <span class="cur-arrow">▼</span>
+          </div>
+          <div class="cur-body">
+            <p>Abelhas e outros polinizadores são responsáveis por 35% de toda a produção global de alimentos. Fazendas sustentáveis preservam habitats para esses insetos vitais.</p>
+          </div>
+        </div>
+        <div class="curiosity-card reveal" data-delay="200">
+          <div class="cur-header">
+            <span class="cur-icon">🌊</span>
+            <h4>Água Virtual</h4>
+            <span class="cur-arrow">▼</span>
+          </div>
+          <div class="cur-body">
+            <p>Produzir 1 kg de carne bovina consome cerca de 15.000 litros de água. A agricultura de precisão e o manejo sustentável podem reduzir essa pegada hídrica em mais de 40%.</p>
+          </div>
+        </div>
+        <div class="curiosity-card reveal" data-delay="300">
+          <div class="cur-header">
+            <span class="cur-icon">🌡️</span>
+            <h4>Solo Vivo</h4>
+            <span class="cur-arrow">▼</span>
+          </div>
+          <div class="cur-body">
+            <p>Uma colher de chá de solo saudável contém mais microrganismos do que pessoas na Terra. Preservar a vida do solo é a base de qualquer sistema agrícola sustentável e produtivo.</p>
+          </div>
+        </div>
+        <div class="curiosity-card reveal" data-delay="400">
+          <div class="cur-header">
+            <span class="cur-icon">🌲</span>
+            <h4>Brasil Verde</h4>
+            <span class="cur-arrow">▼</span>
+          </div>
+          <div class="cur-body">
+            <p>O Brasil preserva 66% de toda sua vegetação nativa original, líder entre os grandes produtores mundiais. O Código Florestal exige que propriedades rurais mantenham até 80% de reserva legal na Amazônia.</p>
+          </div>
+        </div>
+        <div class="curiosity-card reveal" data-delay="500">
+          <div class="cur-header">
+            <span class="cur-icon">⚡</span>
+            <h4>Biogás do Campo</h4>
+            <span class="cur-arrow">▼</span>
+          </div>
+          <div class="cur-body">
+            <p>Uma única fazenda suinícola de 1.000 animais pode gerar bioenergia equivalente a 30 casas por ano com biodigestores. O resíduo vira adubo orgânico, fechando o ciclo sustentável.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span>🌿</span>
+          <span>AgroFuturo</span>
+        </div>
+        <p>Promovendo o diálogo entre produção agrícola e responsabilidade ambiental para construir um futuro que alimenta e preserva.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" title="Instagram">📷</a>
+          <a href="#" class="social-btn" title="Twitter/X">🐦</a>
+          <a href="#" class="social-btn" title="LinkedIn">💼</a>
+          <a href="#" class="social-btn" title="YouTube">▶️</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Conteúdo</h4>
+        <ul>
+          <li><a href="#ambiente">Meio Ambiente</a></li>
+          <li><a href="#tecnologias">Tecnologias</a></li>
+          <li><a href="#impactos">Impactos</a></li>
+          <li><a href="#grafico">Dados</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Interativo</h4>
+        <ul>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#quiz">Quiz</a></li>
+          <li><a href="#timeline">Timeline</a></li>
+          <li><a href="#curiosidades">Curiosidades</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Sobre o Projeto</h4>
+        <p>Projeto educacional desenvolvido para conscientizar sobre a importância da sustentabilidade no agronegócio moderno.</p>
+        <p class="footer-category">Categoria: Ciências &amp; Meio Ambiente</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-motto">"Produzir mais, preservar melhor."</p>
+      <p class="footer-credits">© 2025 AgroFuturo — Projeto Educacional sobre Sustentabilidade no Agronegócio</p>
+    </div>
+  </footer>
+ 
+  <!-- Voltar ao topo -->
+  <button id="back-to-top" aria-label="Voltar ao topo">↑</button>
+ 
+  <script src="script.js"></script>
 </body>
 </html>
+ 
