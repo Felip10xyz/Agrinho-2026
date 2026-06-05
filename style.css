@@ -576,7 +576,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .gallery-item:first-child { grid-column: span 2; }
 .gallery-item:nth-child(4) { grid-column: span 2; }
-
+.gallery-item:nth-child(1) { background: url('a /2021-02-19-fazenda-3-meninas-31.avif')    center/cover; }
+.gallery-item:nth-child(2) { background: url('a /istockphoto-613321162-612x612.jpg')  center/cover; }
+.gallery-item:nth-child(3) { background: url('a /solar.jpg')      center/cover; }
+.gallery-item:nth-child(4) { background: url('a /irrigacao-de-precisao-uso-inteligente-da-agua-e-maior-produtividade.webp')  center/cover; }
+.gallery-item:nth-child(5) { background: url('a /Preservação-Meio-Ambiente.jpg')   center/cover; }
+.gallery-item:nth-child(6) { background: url('a /curso-de-drone-agricola.webp')      center/cover; }
 .gallery-overlay {
   position: absolute;
   inset: 0;
