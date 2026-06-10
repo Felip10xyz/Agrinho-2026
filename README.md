@@ -8,6 +8,6 @@ O nome do site é "AgroForte", ele fala sobre agricultura sustentável e como n�
 
 O site não é complexo, ele apenas fornece informações sobre o tema, com pequenas interações.
 
-(O projeto teve o auxílio das Inteligências Artifíciais: ChatGPT, Claude e Gemini)
+(O projeto teve o auxílio das Inteligências Artifíciais: ChatGPT, Claude e Gemini e Canva)
 
 Projeto desenvolvido para o concurso Agrinho 2026.
